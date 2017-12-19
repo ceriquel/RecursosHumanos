@@ -5,10 +5,24 @@
  */
 package recursoshumanos.modelo;
 
+import java.util.Date;
+
+
+
+
 /**
  *
  * @author Cèsar
  */
 public class Persona {
+    
+    private int codigo;
+    private int rut;
+    private String dv;
+    private String nombre;
+    private Date fechaIngreso;
+    private String direccion;
+    private Date fechaNacimiento;
+    
     
 }

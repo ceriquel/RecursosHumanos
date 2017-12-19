@@ -9,6 +9,6 @@ package recursoshumanos.modelo;
  *
  * @author Cèsar
  */
-public class ModeloAgregar {
+public class ModeloCrud {
     
 }
