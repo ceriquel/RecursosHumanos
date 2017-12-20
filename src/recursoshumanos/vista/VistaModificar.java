@@ -6,6 +6,7 @@
 package recursoshumanos.vista;
 
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import recursoshumanos.controlador.ControladorCrud;
@@ -200,6 +201,19 @@ public class VistaModificar extends javax.swing.JFrame {
 
     private void jButtonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarActionPerformed
         // TODO add your handling code here:
+        Integer codigo=new Integer(jTextFieldCodigo.getText());
+            String nombre = jTextFieldNombre.getText();
+            String rut= jTextFieldRut.getText();
+            String direccion=jTextFieldDireccion.getText();
+            String fechaIngreso=jTextFieldIngreso.getText();
+            String fechaNacimiento=jTextFieldNacimiento.getText();
+            
+        ControladorCrud controladorModificar = new ControladorCrud();
+        try {
+            controladorModificar.modificar(codigo, rut, nombre, fechaIngreso, direccion, fechaNacimiento);
+        } catch (SQLException ex) {
+            Logger.getLogger(VistaModificar.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButtonModificarActionPerformed
 
     private void jButtonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolverActionPerformed

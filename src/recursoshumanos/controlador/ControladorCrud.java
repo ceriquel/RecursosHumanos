@@ -26,7 +26,7 @@ public class ControladorCrud {
     
     private ModeloCrud modeloModificar;
     
-    public void modificar(int codigo, String rut, String nombre, Date fechaIngreso, String direccion, Date fechaNacimiento) throws SQLException{
+    public void modificar(int codigo, String rut, String nombre, String fechaIngreso, String direccion, String fechaNacimiento) throws SQLException{
         modeloModificar=new ModeloCrud();
         modeloModificar.modificar(codigo, rut, nombre, fechaIngreso, direccion, fechaNacimiento);
     }

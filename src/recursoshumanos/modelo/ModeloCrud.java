@@ -20,11 +20,11 @@ import recursoshumanos.conexion.Conexion;
  */
 public class ModeloCrud {
     
-     public void modificar(int codigo, String rut, String nombre, Date fechaIngreso, String direccion, Date fechaNacimiento) throws SQLException{
+     public void modificar(int codigo, String rut, String nombre, String fechaIngreso, String direccion, String fechaNacimiento) throws SQLException{
         System.out.println("Modificar registro...");
         Statement dec;
         dec=Conexion.conexion.createStatement();
-        String query1="UPDATE PERSONAL SET RUT='"+rut+"', NOMBRE="+nombre+", FECHA_INGRESO='"+fechaIngreso+"', DIRECCION='"+direccion+"', FECHA_NACIMIENTO='"+fechaNacimiento+"' WHERE ID_PERSONAL="+codigo;
+        String query1="UPDATE PERSONAL SET RUT='"+rut+"', NOMBRE='"+nombre+"', FECHA_INGRESO='"+fechaIngreso+"', DIRECCION='"+direccion+"', FECHA_NACIMIENTO='"+fechaNacimiento+"' WHERE ID_PERSONAL="+codigo;
         dec.executeUpdate(query1);
     }
      
