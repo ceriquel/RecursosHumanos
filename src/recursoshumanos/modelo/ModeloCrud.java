@@ -40,9 +40,9 @@ public class ModeloCrud {
             persona = new Persona();
             persona.setRut(resultSet.getString("RUT"));
             persona.setNombre(resultSet.getString("NOMBRE"));
-            persona.setFechaIngreso(resultSet.getDate("FECHA_INGRESO"));
+            persona.setFechaIngreso(resultSet.getString("FECHA_INGRESO"));
             persona.setDireccion(resultSet.getString("DIRECCION"));
-            persona.setFechaNacimiento(resultSet.getDate("FECHA_NACIMIENTO"));
+            persona.setFechaNacimiento(resultSet.getString("FECHA_NACIMIENTO"));
             
         }
         } catch (SQLException ex) {

@@ -19,14 +19,14 @@ public class Persona {
     private int codigo;
     private String rut;
     private String nombre;
-    private Date fechaIngreso;
+    private String fechaIngreso;
     private String direccion;
-    private Date fechaNacimiento;
+    private String fechaNacimiento;
 
     public Persona() {
     }
 
-    public Persona(int codigo, String rut, String nombre, Date fechaIngreso, String direccion, Date fechaNacimiento) {
+    public Persona(int codigo, String rut, String nombre, String fechaIngreso, String direccion, String fechaNacimiento) {
         this.codigo = codigo;
         this.rut = rut;
         this.nombre = nombre;
@@ -59,11 +59,11 @@ public class Persona {
         this.nombre = nombre;
     }
 
-    public Date getFechaIngreso() {
+    public String getFechaIngreso() {
         return fechaIngreso;
     }
 
-    public void setFechaIngreso(Date fechaIngreso) {
+    public void setFechaIngreso(String fechaIngreso) {
         this.fechaIngreso = fechaIngreso;
     }
 
@@ -75,11 +75,11 @@ public class Persona {
         this.direccion = direccion;
     }
 
-    public Date getFechaNacimiento() {
+    public String getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
+    public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
     

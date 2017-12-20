@@ -78,10 +78,20 @@ public class VistaModificar extends javax.swing.JFrame {
         jLabel6.setText("FECHA INGRESO");
 
         jButtonModificar.setText("MODIFICAR");
+        jButtonModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonModificarActionPerformed(evt);
+            }
+        });
 
         jButtonLimpiar.setText("LIMPIAR");
 
         jButtonVolver.setText("VOLVER");
+        jButtonVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVolverActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -180,13 +190,22 @@ public class VistaModificar extends javax.swing.JFrame {
                 jTextFieldRut.setText(controladorCrud.buscarPersona(codigo).getRut());
                 jTextFieldNombre.setText(controladorCrud.buscarPersona(codigo).getNombre());
                 jTextFieldDireccion.setText(controladorCrud.buscarPersona(codigo).getDireccion());
-                //jTextFieldNacimiento.setText(controladorCrud.buscarPersona(codigo).getFechaNacimiento());
-                //jTextFieldIngreso.setText(controladorCrud.buscarPersona(codigo).getFechaIngreso());
+                jTextFieldNacimiento.setText(controladorCrud.buscarPersona(codigo).getFechaNacimiento());
+                jTextFieldIngreso.setText(controladorCrud.buscarPersona(codigo).getFechaIngreso());
             } catch (SQLException ex) {
                 Logger.getLogger(VistaModificar.class.getName()).log(Level.SEVERE, null, ex);
             }
         
     }//GEN-LAST:event_jButtonBuscarActionPerformed
+
+    private void jButtonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonModificarActionPerformed
+
+    private void jButtonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolverActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jButtonVolverActionPerformed
 
     /**
      * @param args the command line arguments
