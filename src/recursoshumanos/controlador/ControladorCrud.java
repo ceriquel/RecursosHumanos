@@ -5,10 +5,30 @@
  */
 package recursoshumanos.controlador;
 
+import java.sql.SQLException;
+import java.util.Date;
+import recursoshumanos.modelo.ModeloCrud;
+import recursoshumanos.modelo.Persona;
+
 /**
  *
  * @author Cèsar
  */
 public class ControladorCrud {
+    
+    private ModeloCrud modeloModificar;
+    
+    public void modificar(int codigo, String rut, String nombre, Date fechaIngreso, String direccion, Date fechaNacimiento) throws SQLException{
+        modeloModificar=new ModeloCrud();
+        modeloModificar.modificar(codigo, rut, nombre, fechaIngreso, direccion, fechaNacimiento);
+    }
+    
+     private ModeloCrud modeloBuscar;
+    
+     public Persona buscarPersona(int codigo) throws SQLException{
+         modeloBuscar=new ModeloCrud();
+         return modeloBuscar.buscarPersona(codigo);
+         
+     }
     
 }

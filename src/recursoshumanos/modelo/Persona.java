@@ -17,8 +17,7 @@ import java.util.Date;
 public class Persona {
     
     private int codigo;
-    private int rut;
-    private String dv;
+    private String rut;
     private String nombre;
     private Date fechaIngreso;
     private String direccion;
@@ -27,10 +26,9 @@ public class Persona {
     public Persona() {
     }
 
-    public Persona(int codigo, int rut, String dv, String nombre, Date fechaIngreso, String direccion, Date fechaNacimiento) {
+    public Persona(int codigo, String rut, String nombre, Date fechaIngreso, String direccion, Date fechaNacimiento) {
         this.codigo = codigo;
         this.rut = rut;
-        this.dv = dv;
         this.nombre = nombre;
         this.fechaIngreso = fechaIngreso;
         this.direccion = direccion;
@@ -45,20 +43,12 @@ public class Persona {
         this.codigo = codigo;
     }
 
-    public int getRut() {
+    public String getRut() {
         return rut;
     }
 
-    public void setRut(int rut) {
+    public void setRut(String rut) {
         this.rut = rut;
-    }
-
-    public String getDv() {
-        return dv;
-    }
-
-    public void setDv(String dv) {
-        this.dv = dv;
     }
 
     public String getNombre() {
