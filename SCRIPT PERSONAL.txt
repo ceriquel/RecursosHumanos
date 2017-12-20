@@ -1,0 +1,27 @@
+create table PERSONAL (
+ID_PERSONAL NUMBER (20),
+RUT VARCHAR2 (20),
+FECHA_INGRESO DATE,
+DIRECCION VARCHAR2 (50),
+FECHA_NACIMIENTO DATE,
+NOMBRE VARCHAR2 (40));
+
+ALTER TABLE PERSONAL ADD CONSTRAINT PK_ID PRIMARY KEY (ID_PERSONAL, RUT);
+
+CREATE SEQUENCE IDPER
+START WITH 1
+INCREMENT BY 1;
+
+ CREATE OR REPLACE TRIGGER "PERSONAL" 
+   before insert on "PERSONAL" 
+   for each row 
+begin  
+   if inserting then 
+      if :NEW."ID_PERSONAL" is null then 
+         select IDPER.nextval into :NEW."ID_PERSONAL" from dual; 
+      end if; 
+   end if; 
+end;
+
+/
+ALTER TRIGGER "PERSONAL" ENABLE;
