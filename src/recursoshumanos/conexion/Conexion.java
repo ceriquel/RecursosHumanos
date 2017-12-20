@@ -5,6 +5,11 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 /**
  *
  * @author 
@@ -21,7 +26,9 @@ public class Conexion {
         if (conexion == null) {
             //String[] parte;
             //parte = infoConexion.split(",");
-            String url = "jdbc:oracle:thin:MSP-PM-04-01.aws.smartcloud.cl:1521:xe";
+
+            String url = "jdbc:oracle:thin:@MSP-PM-04-01.aws.smartcloud.cl:1521:xe";
+
             String user = "usuario01";
             String pass = "usuario01";
             try {
